@@ -2,6 +2,8 @@ import React, { Component, useState, useEffect } from 'react';
 
 import UsersList from '../components/UsersList'
 
+// useWindowSize -> { x: 0, y: 10 }, window.innerWidth, window.innerHeight
+
 function UsersContainer() {
 
   // const result = useState([]);
@@ -12,9 +14,15 @@ function UsersContainer() {
   const [ users, setUsers ] = useState([]);
 
   useEffect(() => {
+    // componentDidMount
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(data => setUsers(data));
+
+    return () => {
+      // componentWillUnmount
+    }
+
   }, []);
 
   return <UsersList users={users} />
@@ -31,6 +39,10 @@ function UsersContainer() {
 //     .then(response => response.json())
 //     .then(data => this.setState({ users: data }));
 //   }
+
+//   // componentWillUnmount() {
+
+//   // }
 
 //   render() {
 //     const { users } = this.state;
