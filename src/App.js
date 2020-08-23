@@ -1,5 +1,8 @@
 import React from 'react';
 
+// import UsersContainer from '@abc/users/UsersContainer';
+import UsersContainer from './users/containers/UsersContainer';
+
 function clickHandler(event) {
   // event.preventDefault();
   console.log('Hello from click handler!');
@@ -16,6 +19,7 @@ function App() {
   return (
     <div className="app">
       <Button color="blue" text="Hello WarsawJS" />
+      <UsersContainer />
     </div>
   );
 }
