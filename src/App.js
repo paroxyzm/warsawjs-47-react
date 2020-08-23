@@ -8,7 +8,7 @@ import {
 
 // import UsersContainer from '@abc/users/UsersContainer';
 import UsersContainer from './users/containers/UsersContainer';
-import {CalculatorContainer} from "./calculator/containters/CalculatorContainer";
+import {CalculatorContainerFun} from "./calculator/containters/CalculatorContainerFun";
 
 function clickHandler(event) {
     // event.preventDefault();
@@ -40,7 +40,7 @@ function App() {
                         <UsersContainer/>
                     </Route>
                     <Route path="/money">
-                        <CalculatorContainer/>
+                        <CalculatorContainerFun/>
 
                     </Route>
                     <Route path="/">
