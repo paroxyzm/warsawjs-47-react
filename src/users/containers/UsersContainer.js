@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import UsersList from '../components/UsersList'
 
